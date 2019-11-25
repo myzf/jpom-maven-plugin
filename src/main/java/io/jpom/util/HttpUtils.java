@@ -134,4 +134,20 @@ public class HttpUtils {
     public static String post(String url, Map<String, String> params, Map<String, String> headers, int connectTimeout, int readTimeout, String charset) {
         return invokeUrl(url, params, headers, connectTimeout, readTimeout, charset, HttpMethod.POST);
     }
+
+
+    public static String get(String url, Map params, int connectTimeout, int readTimeout, String charset) {
+        return invokeUrl(url, params, null, connectTimeout, readTimeout, charset, HttpMethod.GET);
+
+
+    }
+
+    public static void main(String[] args) {
+
+        String str = get("http://localhost:2122/api/build/60bef020e2b04ba5a92248192ad1802f/f8chn0mji3", null, 3000, 3000, "UTF-8");
+        System.out.println(str);
+    }
+
+
 }
+

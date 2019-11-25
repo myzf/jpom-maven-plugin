@@ -8,6 +8,7 @@ package io.jpom.entity;
  */
 public class ProjectInfo {
     // 必传参数
+
     /**
      *
      */
